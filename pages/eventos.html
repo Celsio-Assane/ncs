@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conexão Acadêmica - Eventos sobre pesquisa, bolsas e ciência.">
+    <meta name="keywords" content="eventos acadêmicos, bolsas, ciência, congresso, fórum, simpósio">
+    <meta name="author" content="Conexão Acadêmica">
+    <meta property="og:title" content="Conexão Acadêmica - Eventos Acadêmicos">
+    <meta property="og:description" content="Agenda de eventos acadêmicos, simpósios, congressos e muito mais.">
+    <meta property="og:image" content="https://conexacademica.com/imagens/social-banner.jpg">
+    <meta property="og:url" content="https://conexacademica.com/eventos.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="../imagens/favicon.webp" type="image/webp">
+    <title>Eventos | Conexão Académica</title>
+
+    <!-- Estilos e Fontes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #005661 50%, #006d5b 50%);
+            color: #333;
+        }
+
+        header,
+        footer {
+            background-color: #005661;
+            color: white;
+        }
+
+        header {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            max-height: 90px;
+        }
+
+        nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #f9b000;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f8f8f8;
+        }
+
+        .sidebar {
+            flex: 1 1 300px;
+            padding: 20px;
+            background: #fff;
+            border-right: 1px solid #ddd;
+        }
+
+        .event-item {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .event-item:hover {
+            background-color: #eef;
+        }
+
+        .details {
+            flex: 2 1 600px;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .date-info {
+            margin: 10px 0;
+            padding: 10px;
+            background: #eef;
+            border-radius: 5px;
+        }
+
+        .calendar {
+            margin-top: 30px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.4rem;
+        }
+
+        .social-icons a:hover {
+            color: #f9b000;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../imagens/logo.webp" alt="Logo Conexão Acadêmica">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../pages/oportunidade.html"><i class="fas fa-globe-americas"></i> Oportunidades</a></li>
+                <li><a href="../pages/vida-academica.html"><i class="fas fa-user-graduate"></i> Vida Académica</a></li>
+                <li><a href="../pages/escrita-academica.html"><i class="fas fa-pen-fancy"></i> Escrita Académica</a></li>
+                <li><a href="../pages/podcast.html"><i class="fas fa-podcast"></i> Podcasts</a></li>
+                <li><a href="../pages/blog.html"><i class="fas fa-blog"></i> Notícias</a></li>
+                <li><a href="../pages/sobre-nos.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="../pages/contacto.html"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <h2>Próximos Eventos</h2>
+            <div class="event-item" onclick="showDetails(0)">Simpósio de Sustentabilidade 2025</div>
+            <div class="event-item" onclick="showDetails(1)">Congresso Internacional de Energias Renováveis</div>
+            <div class="event-item" onclick="showDetails(2)">Fórum Acadêmico de Recursos Hídricos</div>
+        </aside>
+
+        <section class="details" id="eventDetails">
+            <h2>Selecione um evento</h2>
+            <p>Ao clicar em um evento, os detalhes aparecerão aqui.</p>
+            <div class="calendar" id="calendar"></div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="../notificacoes/politica-privacidade.html">Política de Privacidade</a> |
+            <a href="../pages/sobre-nos.html">Sobre Nós</a> |
+            <a href="../pages/contacto.html">Contato</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@conexaoacademica258" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/conexao_academica258" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.t.me/conexaoacademica" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.facebook.com/conexaoacademica258" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@conexaoacademica-258" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 Conexão Acadêmica. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script>
+        const eventos = [
+            {
+                titulo: "Simpósio de Sustentabilidade 2025",
+                dataEvento: "2025-08-20",
+                dataInscricao: "2025-07-10",
+                prazoSubmissao: "2025-06-30",
+                link: "https://exemplo.com/simposio2025"
+            },
+            {
+                titulo: "Congresso Internacional de Energias Renováveis",
+                dataEvento: "2025-09-15",
+                dataInscricao: "2025-08-01",
+                prazoSubmissao: "2025-07-20",
+                link: "https://exemplo.com/congresso2025"
+            },
+            {
+                titulo: "Fórum Acadêmico de Recursos Hídricos",
+                dataEvento: "2025-10-05",
+                dataInscricao: "2025-09-01",
+                prazoSubmissao: "2025-08-15",
+                link: "https://exemplo.com/forum2025"
+            }
+        ];
+
+        function showDetails(index) {
+            const evento = eventos[index];
+            const container = document.getElementById("eventDetails");
+            container.innerHTML = `
+        <h2>${evento.titulo}</h2>
+        <div class="date-info"><strong>Data do Evento:</strong> ${evento.dataEvento}</div>
+        <div class="date-info"><strong>Inscrições até:</strong> ${evento.dataInscricao}</div>
+        <div class="date-info"><strong>Prazo para Submissão:</strong> ${evento.prazoSubmissao}</div>
+        <p><a href="${evento.link}" class="btn" target="_blank">🔗 Acessar Site do Evento</a></p>
+        <div class="calendar" id="calendar"></div>
+      `;
+
+            renderCalendar(evento.dataEvento);
+        }
+
+        function renderCalendar(date) {
+            const calendarEl = document.getElementById("calendar");
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                initialDate: date,
+                events: eventos.map(e => ({
+                    title: e.titulo,
+                    start: e.dataEvento
+                }))
+            });
+            calendar.render();
+        }
+    </script>
+</body>
+
+</html>

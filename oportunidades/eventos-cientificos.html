@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A Conexão Académica é uma plataforma dedicada a democratizar o acesso à informação de qualidade...">
+    <meta name="keywords" content="bolsas de estudo, artigo científico, ferramentas, intercâmbio, conexacademica">
+    <meta name="author" content="Conexão Académica">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Conexão Académica - Transformando vidas com informação">
+    <meta property="og:description" content="A Conexão Académica é uma plataforma dedicada a democratizar...">
+    <meta property="og:image" content="https://conexacademica.com/imagens/social-banner.jpg">
+    <meta property="og:url" content="https://conexacademica.com">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Ícone -->
+    <link rel="icon" href="../imagens/favicon.webp" type="image/webp">
+
+    <!-- CSS -->
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/events.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>Eventos Científicos | Conexão Académica</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../imagens/logo.webp" alt="Logo do Conexão Académica">
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">&#9776;</button>
+            <nav id="nav-menu" role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../pages/oportunidade.html" class="nav-link"><i class="fas fa-globe-americas"></i>
+                            Oportunidades</a></li>
+                    <li><a href="../pages/vida-academica.html" class="nav-link"><i class="fas fa-user-graduate"></i>
+                            Vida Académica</a></li>
+                    <li><a href="../pages/escrita-academica.html" class="nav-link"><i class="fas fa-pen-fancy"></i>
+                            Escrita Académica</a></li>
+                    <li><a href="../pages/podcast.html" class="nav-link"><i class="fas fa-podcast"></i> Podcasts</a>
+                    </li>
+                    <li><a href="../pages/noticias.html" class="nav-link"><i class="fas fa-blog"></i> Notícias</a></li>
+                    <li><a href="../pages/sobre-nos.html" class="nav-link"><i class="fas fa-info-circle"></i> Sobre</a>
+                    </li>
+                    <li><a href="../pages/contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <h1>Eventos Científicos</h1>
+
+    <ul class="event-list" id="eventList">
+        <!-- Eventos serão inseridos aqui pelo JS -->
+    </ul>
+
+    <div class="event-details" id="eventDetails">
+        <button class="close-btn" id="closeBtn" title="Fechar">&times;</button>
+        <div class="details-main">
+            <div class="calendar-box" id="calendarBox">
+                <div class="calendar-month"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-year"></div>
+            </div>
+            <div>
+                <h2 class="details-title" id="detailTitle"></h2>
+                <div class="countdown" id="countdown"></div>
+            </div>
+        </div>
+        <div class="details-info">
+            <div>
+                <div class="info-label">Data de Inscrição:</div>
+                <div class="info-value" id="inscriptionDate"></div>
+            </div>
+            <div>
+                <div class="info-label">Local:</div>
+                <div class="info-value" id="location"></div>
+            </div>
+            <div>
+                <div class="info-label">Site Oficial:</div>
+                <div class="info-value"><a href="#" target="_blank" id="officialSite">Abrir site</a></div>
+            </div>
+            <div>
+                <div class="info-label">Organizador:</div>
+                <div class="info-value" id="organizer"></div>
+            </div>
+            <div>
+                <div class="info-label">País:</div>
+                <div class="info-value" id="countryFlag" style="font-size: 2rem;"></div>
+            </div>
+        </div>
+        <a href="#" target="_blank" class="pdf-link" id="pdfLink">Baixar Anúncio (PDF)</a>
+    </div>
+
+    <script>
+        const events = [
+            {
+                id: 1,
+                title: "Congresso Internacional de Biotecnologia",
+                date: "2025-08-20",
+                inscriptionDeadline: "2025-07-15",
+                location: "São Paulo, Brasil",
+                officialSite: "https://conbiotech2025.org",
+                organizer: "Associação Brasileira de Biotecnologia",
+                countryFlag: "🇧🇷",
+                pdf: "https://conbiotech2025.org/edital.pdf"
+            },
+            {
+                id: 2,
+                title: "Simpósio Europeu de Inteligência Artificial",
+                date: "2025-09-10",
+                inscriptionDeadline: "2025-08-20",
+                location: "Berlim, Alemanha",
+                officialSite: "https://ai-symposium.eu",
+                organizer: "European AI Society",
+                countryFlag: "🇩🇪",
+                pdf: "https://ai-symposium.eu/announcement.pdf"
+            },
+            {
+                id: 3,
+                title: "Workshop de Energias Renováveis na África",
+                date: "2025-11-05",
+                inscriptionDeadline: "2025-10-01",
+                location: "Nairobi, Quênia",
+                officialSite: "https://renewableafrica.org",
+                organizer: "African Renewable Energy Network",
+                countryFlag: "🇰🇪",
+                pdf: "https://renewableafrica.org/pdf/announcement.pdf"
+            }
+        ];
+
+        const eventList = document.getElementById('eventList');
+        const eventDetails = document.getElementById('eventDetails');
+        const closeBtn = document.getElementById('closeBtn');
+
+        const calendarMonth = eventDetails.querySelector('.calendar-month');
+        const calendarDay = eventDetails.querySelector('.calendar-day');
+        const calendarYear = eventDetails.querySelector('.calendar-year');
+        const detailTitle = document.getElementById('detailTitle');
+        const inscriptionDate = document.getElementById('inscriptionDate');
+        const locationEl = document.getElementById('location');
+        const officialSite = document.getElementById('officialSite');
+        const organizerEl = document.getElementById('organizer');
+        const countryFlag = document.getElementById('countryFlag');
+        const pdfLink = document.getElementById('pdfLink');
+        const countdownEl = document.getElementById('countdown');
+
+        function renderEventList() {
+            events.forEach(ev => {
+                const li = document.createElement('li');
+                li.classList.add('event-item');
+                li.dataset.id = ev.id;
+
+                li.innerHTML = `
+                        <span class="event-title">${ev.title}</span>
+                        <span class="event-date">${formatDate(ev.date)}</span>
+                    `;
+
+                li.addEventListener('click', () => openDetails(ev.id)); // correção aqui
+                eventList.appendChild(li);
+            });
+        }
+
+        function formatDate(dateStr) {
+            const d = new Date(dateStr);
+            return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        }
+
+        function getMonthShortName(monthIndex) {
+            const months = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+            return months[monthIndex];
+        }
+
+        function getTimeRemaining(eventDate) {
+            const now = new Date();
+            const target = new Date(eventDate);
+            const diff = target - now;
+
+            if (diff <= 0) return "Evento já começou ou terminou";
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+            return `${days} dias, ${hours}h e ${minutes}min restantes`;
+        }
+
+        let countdownInterval = null;
+        function startCountdown(eventDate) {
+            if (countdownInterval) clearInterval(countdownInterval);
+
+            function update() {
+                countdownEl.textContent = getTimeRemaining(eventDate);
+            }
+            update();
+
+            countdownInterval = setInterval(update, 60000);
+        }
+
+        function openDetails(id) {
+            const ev = events.find(e => e.id === id);
+            if (!ev) return;
+
+            const dateObj = new Date(ev.date);
+            calendarMonth.textContent = getMonthShortName(dateObj.getMonth());
+            calendarDay.textContent = dateObj.getDate();
+            calendarYear.textContent = dateObj.getFullYear();
+
+            detailTitle.textContent = ev.title;
+            inscriptionDate.textContent = formatDate(ev.inscriptionDeadline);
+            locationEl.textContent = ev.location;
+            officialSite.href = ev.officialSite;
+            officialSite.textContent = ev.officialSite;
+            organizerEl.textContent = ev.organizer;
+            countryFlag.textContent = ev.countryFlag;
+            pdfLink.href = ev.pdf;
+
+            eventDetails.classList.add('active');
+            window.scrollTo({ top: eventDetails.offsetTop - 20, behavior: 'smooth' });
+
+            startCountdown(ev.date);
+        }
+
+        closeBtn.addEventListener('click', () => {
+            eventDetails.classList.remove('active');
+            if (countdownInterval) clearInterval(countdownInterval);
+        });
+
+        // Inicializa
+        document.addEventListener('DOMContentLoaded', renderEventList);
+    </script>
+    
+<footer role="contentinfo">
+    <nav class="footer-nav" aria-label="Links de rodapé">
+        <a href="../pages/politica-privacidade.html">Política de Privacidade</a> |
+        <a href="../pages/sobre-nos.html">Sobre Nós</a> |
+        <a href="../pages/contacto.html">Contato</a>
+    </nav>
+    <div class="social-icons" aria-label="Redes sociais">
+        <a href="https://www.tiktok.com/@conexaoacademica258" target="_blank" rel="noopener noreferrer"
+            aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/conexao_academica258" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.t.me/conexaoacademica" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i
+                class="fab fa-telegram"></i></a>
+        <a href="https://www.facebook.com/conexaoacademica258" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@conexaoacademica-258" target="_blank" rel="noopener noreferrer"
+            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 Conexão Académica. Todos os direitos reservados.</p>
+</footer>
+<script src="../js/scripts.js"></script>
+
+</body>
+
+</html>

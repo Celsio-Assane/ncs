@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="A Conexão Académica é uma plataforma que democratiza o acesso à informação de qualidade sobre bolsas, ciência e vivências acadêmicas." />
+    <meta name="keywords"
+        content="bolsas de estudo, escrita científica, intercâmbio, dicas acadêmicas, conexacademica" />
+    <meta name="author" content="Conexão Académica" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Conexão Académica - Podcasts Académicos" />
+    <meta property="og:description"
+        content="Explore nossos podcasts com dicas sobre bolsas de estudo, pesquisa científica e experiências de estudantes." />
+    <meta property="og:image" content="https://conexacademica.com/imagens/social-banner.jpg" />
+    <meta property="og:url" content="https://conexacademica.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Podcasts | Conexão Académica</title>
+    <link rel="icon" href="../imagens/favicon.webp" type="image/webp" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/podcast.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../imagens/logo.webp" alt="Logo Conexão Académica" />
+            </a>
+            <button class="hamburger" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav-menu" class="main-nav">
+                <ul>
+                    <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../pages/oportunidade.html" class="nav-link"><i class="fas fa-globe-americas"></i>
+                            Oportunidades</a></li>
+                    <li><a href="../posts/manutencao.html" class="nav-link"><i class="fas fa-user-graduate"></i> Vida
+                            Académica</a></li>
+                    <li><a href="../pages/escrita-academica.html" class="nav-link"><i class="fas fa-pen-fancy"></i>
+                            Escrita Académica</a></li>
+                    <li><a href="#" class="nav-link active"><i class="fas fa-podcast"></i> Podcasts</a></li>
+                    <li><a href="../pages/noticias.html" class="nav-link"><i class="fas fa-blog"></i> Notícias</a></li>
+                    <li><a href="../pages/sobre-nos.html" class="nav-link"><i class="fas fa-info-circle"></i> Sobre</a>
+                    </li>
+                    <li><a href="../pages/contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero">
+        <div class="container">
+            <h2>🎙️ Podcasts Académicos</h2>
+            <p>Ouça experiências reais de estudantes, dicas sobre bolsas e informações valiosas para sua jornada
+                académica.</p>
+            <a href="#episodios" class="btn">Explorar Episódios</a>
+        </div>
+    </section>
+
+    <!-- Seção de Player -->
+    <section class="sobre player-container">
+        <div class="container">
+            <h2>Ouça agora</h2>
+            <p>Confira o episódio mais recente da Conexão Académica.</p>
+            <div id="audio-player">
+                <audio controls id="main-audio" style="width: 100%;" aria-label="Player de áudio do podcast">
+                    <source src="" type="audio/mpeg" id="audio-source">
+                    Seu navegador não suporta o player de áudio.
+                </audio>
+                <p id="audio-title"></p>
+            </div>
+            <div id="episodios-anteriores">
+                <h3>Episódios Anteriores</h3>
+                <ul id="lista-episodios">
+                    <!-- Lista dinâmica dos episódios -->
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Seção Adicional: Últimos Episódios -->
+    <section class="destaques" id="episodios">
+        <div class="container">
+            <div class="cardx">
+                <h4><span class="emoji">🎧</span> Episódio 01</h4>
+                <p>Como conseguir uma bolsa de estudos para o Brasil – dicas práticas e erros comuns.</p>
+                <a href="#" class="btn-outline">Ouvir</a>
+            </div>
+            <div class="cardx">
+                <h4><span class="emoji">🎧</span> Episódio 02</h4>
+                <p>A rotina de um estudante no IF Goiano – com Célsio Assane.</p>
+                <a href="#" class="btn-outline">Ouvir</a>
+            </div>
+            <div class="cardx">
+                <h4><span class="emoji">🎧</span> Episódio 03</h4>
+                <p>Entrevista com um pesquisador da TWAS sobre ciência e colaboração Sul-Sul.</p>
+                <a href="#" class="btn-outline">Ouvir</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <nav class="footer-nav">
+            <a href="../notificacoes/politica-privacidade.html">Política de Privacidade</a> |
+            <a href="../pages/sobre-nos.html">Sobre Nós</a> |
+            <a href="../pages/contacto.html">Contato</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@conexaoacademica258" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/conexao_academica258" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.t.me/conexaoacademica" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.facebook.com/conexaoacademica258" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@conexaoacademica-258" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 Conexão Académica. Todos os direitos reservados.</p>
+    </footer>  
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

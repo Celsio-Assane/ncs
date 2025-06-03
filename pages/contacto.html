@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A Conexão Académica é uma plataforma dedicada a democratizar o acesso à informação de qualidade. Nosso objetivo é fornecer informações claras e práticas sobre bolsas de estudo nacionais e internacionais, técnicas de pesquisa científica, ferramentas digitais para académicos e experiências reais de estudantes no exterior." />
+  <meta name="keywords"
+    content="bolsas de estudo, como escrever um artigo científico, ferramentas para pesquisadores, intercâmbio acadêmico, dicas para mestrado e doutorado, conexacademica" />
+  <meta name="author" content="Conexão Académica" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Conexão Académica - Transformando vidas com informação" />
+  <meta property="og:description"
+    content="A Conexão Académica é uma plataforma dedicada a democratizar o acesso à informação de qualidade." />
+  <meta property="og:image" content="https://conexacademica.com/imagens/social-banner.jpg" />
+  <meta property="og:url" content="https://conexacademica.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Ícones e fontes -->
+  <link rel="icon" href="../imagens/favicon.webp" type="image/webp" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeMekArAAAAAMyuumGhef17I4oSj4srDhLMSC31"></script>
+
+  <title>Contato | Conexão Académica</title>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../imagens/logo.webp" alt="Logo do Conexão Académica" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="../pages/oportunidade.html" class="nav-link"><i class="fas fa-globe-americas"></i>
+              Oportunidades</a></li>
+          <li><a href="../posts/manutencao.html" class="nav-link"><i class="fas fa-user-graduate"></i> Vida
+              Académica</a></li>
+          <li><a href="../pages/escrita-academica.html" class="nav-link"><i class="fas fa-pen-fancy"></i> Escrita
+              Académica</a></li>
+          <li><a href="../pages/podcast.html" class="nav-link"><i class="fas fa-podcast"></i> Podcasts</a></li>
+          <li><a href="../pages/blog2.html" class="nav-link"><i class="fas fa-blog"></i> Notícias</a></li>
+          <li><a href="../pages/sobre-nos.html" class="nav-link"><i class="fas fa-info-circle"></i> Sobre</a></li>
+          <li><a href="#" class="nav-link active"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="contact-container">
+        <h2>Fale Conosco</h2>
+        <p>Tem dúvidas, sugestões ou deseja colaborar? Envie uma mensagem!</p>
+
+        <form class="contact-form" action="https://formsubmit.co/info.conexaoacademica@gmail.com" method="POST"
+          onsubmit="handleFormSubmit(event)">
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- Configurações ocultas -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_next" value="../notificacoes/sucesso.html">
+          <input type="hidden" name="_subject" value="Nova mensagem do site Conexão Académica">
+
+          <!-- Campos visíveis -->
+          <div class="form-group">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="assunto" placeholder="Assunto" required>
+          </div>
+          <div class="form-group">
+            <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+
+          <button type="submit" class="send-button">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+    <h2>Canais de Comunicação</h2>
+    <p>Email: <a href="mailto:info.conexaoacademica@gmail.com">info.conexaoacademica@gmail.com</a></p>
+    <p>Telefone: <a href="tel:+258877305226">+258 87 730 5226</a></p>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <a href="../notificacoes/politica-privacidade.html">Política de Privacidade</a> |
+      <a href="../pages/sobre-nos.html">Sobre Nós</a> |
+      <a href="#">Contato</a>
+    </nav>
+    <div class="social-icons">
+      <a href="https://www.tiktok.com/@conexaoacademica258" target="_blank" aria-label="TikTok"><i
+          class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/conexao_academica258" target="_blank" aria-label="Instagram"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://www.t.me/conexaoacademica" target="_blank" aria-label="Telegram"><i
+          class="fab fa-telegram-plane"></i></a>
+      <a href="https://www.facebook.com/conexaoacademica258" target="_blank" aria-label="Facebook"><i
+          class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@conexaoacademica-258" target="_blank" aria-label="YouTube"><i
+          class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 Conexão Académica. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script do reCAPTCHA v3 -->
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = document.querySelector('.contact-form');
+
+      grecaptcha.ready(function () {
+        grecaptcha.execute('6LeMekArAAAAAMyuumGhef17I4oSj4srDhLMSC31', { action: 'submit' }).then(function (token) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = 'g-recaptcha-response';
+          input.value = token;
+          form.appendChild(input);
+          form.submit();
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>

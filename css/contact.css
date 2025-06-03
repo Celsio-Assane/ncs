@@ -1,0 +1,94 @@
+/* contact.css */
+
+/* Seção de contato */
+.contact-section {
+  background-color: transparent;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  color: #f9b000;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  font-size: 1rem;
+  color: #f9b000;
+  margin-bottom: 30px;
+}
+
+/* Formulário */
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.send-button {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #004d99;
+}
+
+/* Informações adicionais de contato */
+main h2 {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+main p {
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+main a {
+  color: brown;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: #f9b000;
+}

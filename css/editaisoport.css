@@ -1,0 +1,90 @@
+.containers {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2980b9;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+p.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.edital {
+    background: #eef6fb;
+    border-left: 5px solid #2980b9;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.edital:hover {
+    box-shadow: 0 6px 18px rgba(41, 128, 185, 0.3);
+}
+
+.titulo-edital {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1b4f72;
+    margin-bottom: 6px;
+}
+
+.instituicao {
+    font-style: italic;
+    color: #34495e;
+    margin-bottom: 6px;
+}
+
+.descricao {
+    margin-bottom: 10px;
+    color: #3a3a3a;
+}
+
+.prazo {
+    font-weight: 600;
+    color: #e74c3c;
+    margin-bottom: 12px;
+}
+
+.link-edital {
+    display: inline-block;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.link-edital:hover {
+    background-color: #1b4f72;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .titulo-edital {
+        font-size: 1.1rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+}

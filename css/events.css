@@ -1,0 +1,267 @@
+/* Reset e consistência */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 60px;
+    background-color: #2980b9;
+    border-radius: 2px;
+}
+
+/* Lista de eventos */
+.event-list {
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    padding: 0;
+    list-style: none;
+}
+
+.event-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.event-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a4d7a;
+}
+
+.event-date {
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+/* Painel de detalhes do evento */
+.event-details {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem 2rem;
+    transition: all 0.3s ease;
+    display: none;
+    position: relative;
+}
+
+.event-details.active {
+    display: block;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.3rem;
+    background: #e74c3c;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background: #c0392b;
+}
+
+.details-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.flag {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.details-title {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    color: #2980b9;
+    font-weight: 700;
+}
+
+.details-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.info-value {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.info-value a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.info-value a:hover {
+    text-decoration: underline;
+}
+
+.calendar-box {
+    border: 1px solid #2980b9;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    margin-right: 1.5rem;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.calendar-month {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2980b9;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.calendar-day {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #2c3e50;
+}
+
+.calendar-year {
+    font-size: 1rem;
+    color: #555;
+}
+
+.details-main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.countdown {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #e67e22;
+    user-select: none;
+}
+
+.pdf-link {
+    display: inline-block;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 0.8rem;
+}
+
+.pdf-link:hover,
+.pdf-link:focus {
+    background-color: #1b4f72;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .details-info {
+        grid-template-columns: 1fr;
+    }
+
+    .details-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .calendar-box {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .details-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .event-title {
+        font-size: 1rem;
+    }
+
+    .event-date {
+        font-size: 0.9rem;
+    }
+
+    .close-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
